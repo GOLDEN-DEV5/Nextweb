@@ -1,12 +1,11 @@
 import { Resend } from "resend";
-import { NextResponse,NextRequest } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  
   try {
     const { name, email, subject, message } = await req.json();
-
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "samiabba110@gmail.com",
@@ -19,7 +18,6 @@ export async function POST(req: NextRequest) {
         <p><strong>Message:</strong> ${message}</p>
       `,
     });
-
     return NextResponse.json({ message: "Email sent!" }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ message: "Failed to send email" }, { status: 500 });
