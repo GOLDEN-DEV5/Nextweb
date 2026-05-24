@@ -86,7 +86,149 @@ export default function HomePage() {
             </div>
           ))}
         </motion.div>
+        {/* Featured capabilities */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={6}
+          style={{ width: "100%", marginTop: "8px" }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "16px",
+              paddingTop: "8px",
+              borderTop: "1px solid rgba(30,41,59,0.6)",
+              marginTop: "32px",
+            }}
+          >
+            {[
+              {
+                title: "Clean Architecture",
+                desc: "Structured components + scalable patterns so your product stays easy to maintain.",
+              },
+              {
+                title: "Performance Mindset",
+                desc: "Animation, rendering, and data flows designed to feel instant for users.",
+              },
+              {
+                title: "Full-Stack Delivery",
+                desc: "From UI to APIs to databases—end to end delivery with consistent quality.",
+              },
+            ].map((item) => (
+              <motion.div
+                key={item.title}
+                whileHover={{ y: -4 }}
+                style={{
+                  background: "rgba(15,23,42,0.6)",
+                  border: "1px solid rgba(30,41,59,0.6)",
+                  borderRadius: "16px",
+                  padding: "20px",
+                }}
+              >
+                <h3 style={{ color: "#fff", fontSize: "16px", fontWeight: 800, marginBottom: "8px" }}>
+                  {item.title}
+                </h3>
+                <p style={{ color: "#94a3b8", fontSize: "14px", lineHeight: 1.7 }}>
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Quick CTA */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={7}
+          style={{ width: "100%", paddingTop: "8px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "16px",
+              padding: "18px 18px",
+              borderRadius: "16px",
+              border: "1px solid rgba(99,102,241,0.25)",
+              background:
+                "linear-gradient(135deg, rgba(79,70,229,0.15), rgba(2,6,23,0.35))",
+              marginTop: "32px",
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              <span
+                style={{
+                  color: "#818cf8",
+                  fontSize: "12px",
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  fontWeight: 600,
+                }}
+              >
+                Let&apos;s build something
+              </span>
+              <span style={{ color: "#fff", fontSize: "18px", fontWeight: 800 }}>
+                Need a fast, reliable web app?
+              </span>
+              <span style={{ color: "#94a3b8", fontSize: "14px" }}>
+                I can help with Next.js/React UI, API development, and database design.
+              </span>
+            </div>
+
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              <Link href="/contact" style={{ textDecoration: "none" }}>
+                <motion.span
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "12px 18px",
+                    backgroundColor: "#4f46e5",
+                    color: "#fff",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    borderRadius: "12px",
+                    boxShadow: "0 8px 32px rgba(79,70,229,0.3)",
+                  }}
+                >
+                  Contact me →
+                </motion.span>
+              </Link>
+              <Link href="/projects" style={{ textDecoration: "none" }}>
+                <motion.span
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "12px 18px",
+                    backgroundColor: "transparent",
+                    border: "1px solid rgba(148,163,184,0.35)",
+                    color: "#cbd5e1",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    borderRadius: "12px",
+                  }}
+                >
+                  View work
+                </motion.span>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
 }
+
