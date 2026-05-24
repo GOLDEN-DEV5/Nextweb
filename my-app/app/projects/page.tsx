@@ -10,7 +10,7 @@ const fadeUp: Variants = {
 };
 
 const projects = [
-  { title: "GB Explorer", desc: "A travel & tourism platform for Gilgit Baltistan, featuring interactive maps, trek guides, and local business listings.", tech: ["Next.js", "TypeScript", "Mapbox", "PostgreSQL", "Prisma"], github: "https://github.com", live: "https://example.com", tag: "Full Stack", accent: "rgba(79,70,229,0.15)" },
+  { title: "GB Adventures", desc: "A travel & tourism platform for Gilgit Baltistan, featuring interactive maps, trek guides, and local business listings.", tech: ["Next.js", "TypeScript", "Mapbox", "PostgreSQL", "Prisma"], github: "https://github.com", live: "https://example.com", tag: "Full Stack", accent: "rgba(79,70,229,0.15)" },
   { title: "TaskFlow", desc: "A modern project management SaaS with real-time collaboration, drag-and-drop boards, and team analytics. Served 500+ active users.", tech: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind"], github: "https://github.com", live: "https://example.com", tag: "SaaS", accent: "rgba(109,40,217,0.15)" },
   { title: "SwiftCart", desc: "E-commerce platform with dynamic product listings, secure Stripe payments, order management, and an admin dashboard.", tech: ["Next.js", "Stripe", "Supabase", "Tailwind CSS"], github: "https://github.com", live: "https://example.com", tag: "E-Commerce", accent: "rgba(37,99,235,0.15)" },
   { title: "AQI Monitor", desc: "Real-time air quality monitoring dashboard for Pakistani cities. Pulls data from IoT sensors and displays pollution trends.", tech: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL"], github: "https://github.com", live: "https://example.com", tag: "Data Viz", accent: "rgba(5,150,105,0.15)" },
