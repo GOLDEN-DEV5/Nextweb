@@ -79,7 +79,7 @@ export default function HomePage() {
         {/* Stats */}
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={5}
           style={{ display: "flex", gap: "48px", paddingTop: "32px", borderTop: "1px solid rgba(30,41,59,0.6)", width: "100%" }}>
-          {[{ value: "3+", label: "Years Experience" }, { value: "20+", label: "Projects Built" }, { value: "10+", label: "Happy Clients" }].map((stat) => (
+          {[{ value: "2+", label: "Years Experience" }, { value: "10+", label: "Projects Built" }, { value: "10+", label: "Happy Clients" }].map((stat) => (
             <div key={stat.label} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
               <span className="font-serif" style={{ fontSize: "2rem", color: "#818cf8", fontWeight: 700 }}>{stat.value}</span>
               <span style={{ fontSize: "11px", color: "#64748b", letterSpacing: "0.12em", textTransform: "uppercase" }}>{stat.label}</span>
